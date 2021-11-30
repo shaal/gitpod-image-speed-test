@@ -1,1 +1,7 @@
 image: drupalpod/drupalpod-gitpod-base:20211128-base-experimental4
+
+tasks:
+  - init: |
+      echo "Creating 5GB dummy file"
+      time fallocate -l 5g 5gb-dummy-file.delete.me
+      echo "Finished creating dummy file"
